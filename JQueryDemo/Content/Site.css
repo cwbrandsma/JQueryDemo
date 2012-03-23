@@ -1,0 +1,43 @@
+﻿/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+body
+{
+    padding-top: 90px;
+}
+
+.masthead {
+padding-top: 36px;
+margin-bottom: 72px;
+}
+.jumbotron {
+position: relative;
+}
+
+.masthead h1 {
+margin-bottom: 18px;
+}
+.masthead h1, .masthead p {
+text-align: center;
+}
+.jumbotron h1 {
+margin-bottom: 9px;
+font-size: 81px;
+font-weight: bold;
+letter-spacing: -1px;
+line-height: 1;
+}
+
+.error {
+    background-color: #FFaaaa;
+}
+
+.error label.error {
+    
+}
+label.error {
+    display: inline;
+    width: auto;
+}
