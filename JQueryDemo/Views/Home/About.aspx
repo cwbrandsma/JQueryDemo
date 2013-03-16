@@ -5,21 +5,40 @@
 </asp:Content>
 
 <asp:Content ID="aboutContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h1>About Me</h1>
-    <p>
+    <div class="row form-horizontal">
        <h3>Chris Brandsma</h3>
-       Position: Director of Development, Unity Corporation <br />
-       Email: chris.brandsma@gmail.com <br />
-       GitHub: github.com/cwbrandsma <br/>
-       Twitter: cwbrandsma <br/>
-       Blog: ElegantCode.com <br />
-       Personal: ChrisBrandsma.com  or DiamondBSoftware.com<br />
-       Specialties: C#, Asp.Net MVC, JavaScript, JQuery, Objective-C 
-
-    </p>
-    <p>
-    
-    </p>
+        <div class="control-group ">
+            <label class="control-label ">Position</label>
+            <div class="controls">
+                <strong>Director of Development, Unity Corporation</strong>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Email</label>
+            <div class="controls">
+                <strong>chris.brandsma@gmail.com</strong>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">GitHub</label>
+            <div class="controls">
+                http://github.com/cwbrandsma
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Blog</label>
+            <div class="controls">
+                http://elegantcode.com
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Specialties</label>
+            <div class="controls">
+                C#, Objective-C, JavaScript, Java, ...I program things.
+            </div>
+        </div>
+        
+    </div>
 </asp:Content>
 <asp:Content ID="JSContent" ContentPlaceHolderID="JavascriptContent" runat="server">
     <script type="text/javascript">

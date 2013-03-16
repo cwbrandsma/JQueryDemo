@@ -23,7 +23,8 @@
     <div class="span4">
       <h3><a href="<%=Url.Action("Introduction", "Home") %>">Introduction</a></h3>
       <p>
-          Basic usage of JQuery.  Find an element on the page, change it, bind to a click event.  We are using JQuery 1.7.2, JQuery UI 1.8.7, and the Twitter Bootstrap template.
+          Basic usage of JQuery.  
+          Find an element on the page, change it, bind to a click event.  We are using JQuery 1.8.3 and Twitter Bootstrap 2.0.2.
       </p>
     </div>
     <div class="span4">
@@ -60,23 +61,19 @@
     </div>
   </div>
   <div class="row">
-      <div class="span12">
-          <h2>Learn More</h2>
-              <p>
-        Visit <a class="btn btn-primary btn-large" href="http://jquery.com" title="JQuery Website">JQuery</a>  
-        <a class="btn btn-large" href="http://ui.jquery.com">JQuery UI</a> 
-        <a class="btn btn-large" href="http://jquerymobile.com/">JQuery Mobile</a>
-        <a class="btn btn-large" href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a>
-        <a class="btn btn-large" href="http://malsup.com/jquery/form/">JQuery Form</a>
-        <a class="btn btn-large" href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/">JQuery Validate</a>
-        <a class="btn btn-large" href="http://codylindley.com/jqueryselectors/">Cody Lindly's Selectors page</a>
+   <div class="span12">
+   <h2>Learn More</h2>
+   <p>
+        Visit <a href="http://jquery.com" title="JQuery Website">JQuery</a>,  
+        <a href="http://ui.jquery.com">JQuery UI</a>,
+        <a href="http://jquerymobile.com/">JQuery Mobile</a>,
+        <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a>,
+        <a href="http://malsup.com/jquery/form/">JQuery Form</a>,
+        <a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/">JQuery Validate</a>,
+        <a href="http://codylindley.com/jqueryselectors/">Cody Lindly's Selectors page</a>
     </p>
-
-      </div>
-
+    </div>
   </div>
-
-
 </asp:Content>
 
 <asp:Content ID="JSContent" ContentPlaceHolderID="JavascriptContent" runat="server">

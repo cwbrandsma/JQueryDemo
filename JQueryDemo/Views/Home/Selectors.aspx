@@ -118,7 +118,6 @@
 <script type="text/javascript">
     $(function () {
         $("#navSelectors").parent().addClass("active");
-        $(".accordian").accordion();
 
        // $("#main").css("height", "500px");
         $("#trySelector").click(function () {
