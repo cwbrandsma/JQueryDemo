@@ -86,7 +86,10 @@
 </div>
 <div class="ui-state-default ui-corner-all" style="float:left;height:500px;padding-left:25px">
     <p>
-    Selector: <input id="selector" type="text" /><button id="trySelector" type="button">Submit</button>
+    Selector: 
+        <form id="selectionForm">
+        <input id="selector" type="text" /><button id="trySelector" type="submit">Submit</button>
+        </form>
     </p>
 
     <div id="tests">
@@ -119,14 +122,17 @@
     $(function () {
         $("#navSelectors").parent().addClass("active");
 
-       // $("#main").css("height", "500px");
-        $("#trySelector").click(function () {
+        $("#selectionForm").submit(function (evt) {
+            evt.preventDefault();
+            executeSelector();
+        });
+
+        function executeSelector() {
             $(".selected").removeClass("selected");
 
             var selector = "#tests " + $("#selector").val();
             $(selector).addClass("selected");
-
-        });
+        }
     });
 </script>
 </asp:Content>

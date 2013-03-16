@@ -89,9 +89,9 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\HomeIndex.js" />
-    <Content Include="Scripts\jquery-1.5-vsdoc.js" />
     <Content Include="Scripts\jquery-1.7.2.js" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.3.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery.form.js" />
@@ -101,6 +101,7 @@
     <Content Include="Views\Home\Events.aspx" />
     <Content Include="Views\Home\FormTricks.aspx" />
     <Content Include="Views\Home\Introduction.aspx" />
+    <Content Include="Views\Home\Materials.aspx" />
     <Content Include="Views\Home\Selectors.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

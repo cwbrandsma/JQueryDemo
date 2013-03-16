@@ -21,6 +21,11 @@ namespace JQueryDemo.Controllers
             return View();
         }
 
+        public ActionResult Materials()
+        {
+            return View();
+        }
+
         public ActionResult FormTricks()
         {
             var vm = new FormTricksPost();

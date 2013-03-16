@@ -36,7 +36,9 @@
               <li class="">
                   <a id="navAbout" href="<%=Url.Action("About", "Home") %>">About</a>
               </li>
-
+              <li>
+                  <a id="navMat" href="<%=Url.Action("Materials", "Home") %>">Materials</a>
+              </li>
               <li class="">
                   <a id="navIntro" href="<%=Url.Action("Introduction", "Home") %>">Introduction</a>
               </li>

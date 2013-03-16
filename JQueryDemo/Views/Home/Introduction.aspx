@@ -7,23 +7,52 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
 <div>
+    <div class="hero-unit">
     <h1>All HAIL THE '$'</h1>
     <p>
         $ is JQuery and the beginning of all good things in Javascript
     </p>
-<pre>
+    </div>
+
+    <p class="row">
+    <h3>Know when you can start</h3>
+<code>
     $(document).ready(function(){
         // your code here...
     });
-</pre>
+</code>
 <h3>OR</h3>
-<pre>
+<code>
     $(function(){
         // your code here...
     });
-</pre>
-</div>
+</code>
+</p>
+    </div>
+    <p class="row">
+    <h3>Find things on your page</h3>
+    <code>
+    $("div.myclass").show();
+    </code>
+    </p>
 
+    <p class="row">
+    <h3>Create Html</h3>
+    <code>
+    $("&lt;div&gt;Hi there&lt;/div&gt;").appendTo($("body"));
+    </code>
+    </p>
+
+    <p class="row">
+        <h3>Capture Events</h3>
+        <code>
+            $("#mybutton").click(
+                function(evt){
+                    evt.preventDefault();
+                    // do something
+                });
+        </code>
+    </p>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="CssContent" runat="server">

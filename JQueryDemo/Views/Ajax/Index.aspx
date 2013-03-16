@@ -11,17 +11,17 @@
 <div>
     Status: <span id="ajaxStatus"></span>
 </div>
-<div id="tabs"> 
-    <ul> 
-		<li><a href="#ajax">Ajax</a></li> 
-		<li><a href="#get">GET</a></li> 
-		<li><a href="#jsonget">JSON GET</a></li> 
-		<li><a href="#post">POST</a></li> 
-		<li><a href="#load">Load</a></li> 
-		<li><a href="#commonEvents">Common Events</a></li> 
+<div id="tabs2"> 
+    <ul id="tabs" class="nav nav-tabs"> 
+		<li class="active"><a data-toggle="tab" href="#ajax">Ajax</a></li> 
+		<li><a data-toggle="tab" href="#get">GET</a></li> 
+		<li><a data-toggle="tab" href="#jsonget">JSON GET</a></li> 
+		<li><a data-toggle="tab" href="#post">POST</a></li> 
+		<li><a data-toggle="tab" href="#load">Load</a></li> 
+		<li><a data-toggle="tab" href="#commonEvents">Common Events</a></li> 
 	</ul> 
-
-    <div id="get">
+    <div class="tab-content">
+    <div id="get" class="tab-pane">
         <div class="accordian">
             <h3><a href="#">Basic Get</a></h3>
             <div>
@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    <div id="jsonget">
+    <div id="jsonget"  class="tab-pane">
         <div class="accordian">
             <h3><a href="#">JSON Get</a></h3>
             <div>
@@ -59,7 +59,7 @@ $("#performJsonGet").click(function () {
         </div>    
     </div>    
    
-     <div id="post">
+     <div id="post"  class="tab-pane">
         <div class="accordian">
             <h3><a href="#">Basic Post</a></h3>
             <div>
@@ -84,7 +84,7 @@ $.post("Ajax/PerformPost", data, function (result) {
         </div>
     </div>
    
-    <div id="load">
+    <div id="load" class="tab-pane">
         <div class="accordian">
             <h3><a href="#">Load</a></h3>
             <div>
@@ -101,8 +101,8 @@ $("#loadResult").load("Ajax/PerformLoad");
         </div>    
     </div>  
 
-    <div id="ajax">
-        <div class="accordian">
+    <div id="ajax" class="tab-pane active">
+        <div class="accordian2">
             <h3><a href="#">Ajax</a></h3>
             <div>
                 <button id="performAjax">Call Ajax</button>
@@ -123,7 +123,7 @@ $.ajax({
         }
 })
 .always(function(jqXHR, textStatus) { ajaxResultPost("Always: " + textStatus); })
-.done(function(data) { ajaxResultPost("Done:" + data.message); })
+.success(function(data) {  ajaxResultPost("Success:" + data.message); }
 .fail(function(jqXHR, textStatus) { ajaxResultPost("Fail: something is wrong, " + textStatus); });
                 </pre>
             </div>
@@ -147,7 +147,7 @@ $.ajax({
              </div>
         </div>    
     </div>  
-    <div id="commonEvents">
+    <div id="commonEvents" class="tab-pane">
     <pre>
 $("#ajaxStatus").ajaxComplete(function (event, XMLHttpRequest, ajaxOptions) {
     $(this).html("Complete:" + Date());
@@ -167,7 +167,7 @@ $("#ajaxStatus").ajaxError(function(event, XMLHttpRequest, ajaxOptions, thrownEr
         <li>ajaxSuccess</li>
     </ul>
     </div>
- 
+ </div>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="JavascriptContent" runat="server">
@@ -175,7 +175,7 @@ $("#ajaxStatus").ajaxError(function(event, XMLHttpRequest, ajaxOptions, thrownEr
         $(function () {
             $("#navAjax").parent().addClass("active");
 
-            $("#tabs").tabs();
+            $("#tabs").tab();
             $(".accordian").accordion({ fillSpace: true });
             $(".accordian div").css("height", "200px");
 
@@ -252,7 +252,7 @@ $("#ajaxStatus").ajaxError(function(event, XMLHttpRequest, ajaxOptions, thrownEr
                     }
                 })
                     .always(function(jqXHR, textStatus) { ajaxResultPost("Always: " + textStatus); })
-                    .done(function(data) { ajaxResultPost("Done:" + data.message); })
+                    .success(function(data) { ajaxResultPost("Done:" + data.message); })
                     .fail(function(jqXHR, textStatus) { ajaxResultPost("Fail: something is wrong, " + textStatus); });
 
 

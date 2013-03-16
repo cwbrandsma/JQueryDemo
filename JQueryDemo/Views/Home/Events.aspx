@@ -8,20 +8,20 @@
 
 <h2>Events</h2>
 
-<div id="tabs"> 
-    <ul> 
-		<li><a href="#bindEvents">Bind</a></li> 
-        <li><a href="#thisBinding">This</a></li>
-		<li><a href="#eventProp">Propagation</a></li>
-		<li><a href="#clickEvents">Bind Sortcuts</a></li> 
-		<li><a href="#onEvents">On/Off</a></li> 
-		<li><a href="#delegateEvents">Delegate</a></li> 
+<div> 
+    <ul class="nav nav-tabs"> 
+		<li class="active"><a  data-toggle="tab" href="#bindEvents">Bind</a></li> 
+        <li><a  data-toggle="tab" href="#thisBinding">This</a></li>
+		<li><a  data-toggle="tab" href="#eventProp">Propagation</a></li>
+		<li><a  data-toggle="tab" href="#clickEvents">Bind Sortcuts</a></li> 
+		<li><a  data-toggle="tab" href="#onEvents">On/Off</a></li> 
+		<li><a  data-toggle="tab" href="#delegateEvents">Delegate</a></li> 
 
-		<li><a href="#customEvents">Custom</a></li> 
-        <li><a href="#liveEvents">Live/Die</a></li>
+		<li><a  data-toggle="tab" href="#customEvents">Custom</a></li> 
+        <li><a  data-toggle="tab" href="#liveEvents">Live/Die</a></li>
 	</ul> 
-
-    <div id="clickEvents">
+    <div class="tab-content">
+    <div class="tab-pane active" id="clickEvents">
         <h3>Click
         <small>Just like bind('click'), but without the extra typing</small>
         </h3>
@@ -50,7 +50,7 @@
             <li>mouseeleave</li>
         </ul>
     </div>
-    <div id="bindEvents">
+    <div class="tab-pane" id="bindEvents">
         <div class="page-header">
         <h3>Bind, Unbind, and Trigger
         <small>Base eventing methods</small>
@@ -68,7 +68,7 @@
         <br />
         <button type="button" id="unbindEvent">Remove the Click hander</button> $("#clickButton").unbind("click");
     </div>
-    <div id="thisBinding">
+    <div class="tab-pane" id="thisBinding">
         <div class="page-header">
         <h3>this
         <small>events return a reference to the event's element</small>
@@ -82,7 +82,7 @@
         <div id="thisTest" style="background-color: #ff88">Click Me</div>
     </div>
 
-    <div id="onEvents">
+    <div class="tab-pane" id="onEvents">
         <h3>On, Off
         <small>New in JQuery 1.7</small>
         </h3>
@@ -100,7 +100,7 @@
         <ul id="onButtons">
         </ul>            
     </div>
-    <div id="delegateEvents">
+    <div class="tab-pane" id="delegateEvents">
         <h3>Delegate, Undelegate
         <small>New in JQuery 1.4.2 -- <button class="btn btn-info">not deprecated, but just use on/off.</button></small>
         </h3>
@@ -115,7 +115,7 @@
         <ul id="delegateButtons">
         </ul>            
     </div>
-    <div id="liveEvents">
+    <div class="tab-pane" id="liveEvents">
         <h3>Live, Die
         <small><button class="btn btn-danger">Don't use this</button></small>
         </h3>
@@ -123,7 +123,7 @@
         <div class="warning">Live and Die have been deprecated and will be removed.</div>
 
     </div>
-    <div id="customEvents">
+    <div class="tab-pane" id="customEvents">
         <h3>Custom Events with Live, Bind, and Trigger
         <small></small>
         </h3>
@@ -135,7 +135,7 @@
 
         <button id="customEventButton" type="button">Fire Custom event</button>
 
-        <span id="customEventDiv" style="display:none;"> Look, now I'm here  </span>
+        <span id="customEventDiv" class="alert alert-info" style="display:none;"> Look, now I'm here  </span>
         <pre>
         $("#customEventDiv").bind("lorumIpsum", function () { 
             $(this).toggle('slow'); 
@@ -148,7 +148,7 @@
     </div>
     
     
-    <div id="eventProp">
+    <div class="tab-pane" id="eventProp">
         <h2 style="border-bottom: solid #888888 1px; margin-bottom:20px;" >How to stop event bubbling</h2>
 
         <h3>preventDefault
@@ -186,6 +186,8 @@ Prevents other event handlers from being called.
         </pre>
 
     </div>
+
+</div>
 </div>
 
 
@@ -200,8 +202,6 @@ Prevents other event handlers from being called.
 
     $(function () {
         $("#navEvents").parent().addClass("active");
-
-        $("#tabs").tabs();
 
         // for click tab
         $("#clickButton").click(function () { alert("You clicked me"); });
